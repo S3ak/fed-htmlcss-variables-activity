@@ -1,0 +1,51 @@
+<style>
+  @keyframes make-them-bigger {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(2);
+    }
+  }
+
+  .base-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-fluid-5);
+    width: 100%;
+    margin-bottom: var(--size-3);
+    border-radius: var(--radius-2);
+    padding: var(--size-1);
+    font-size: var(--font-size-fluid-1);
+    box-shadow: var(--shadow-1);
+    animation: var(--animation-fade-in) forwards;
+    transition: box-shadow 300ms ease;
+  }
+
+  .base-nav:hover {
+    box-shadow: var(--shadow-2);
+  }
+
+  .base-nav-item {
+    background: var(--gradient-1);
+    min-height: 45px;
+    padding: var(--size-1) var(--size-3);
+    color: var(--gray-1);
+    border-radius: var(--radius-2);
+  }
+
+  .base-nav-item:hover {
+    background: var(--gradient-1);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-1);
+    animation: make-them-bigger 400ms;
+  }
+</style>
+
+<nav class="base-nav">
+  <a class="base-nav-item" href="index.html">Home</a>
+  <a class="base-nav-item" href="example-1.html">Example</a>
+  <a class="base-nav-item" href="excercise-1.html">Excercise</a>
+  <a class="base-nav-item" href="answers.html">Answers</a>
+</nav>
